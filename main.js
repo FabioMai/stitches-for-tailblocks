@@ -8,20 +8,20 @@ const filter = document.querySelector(".js-filter");
 const downloadBtn = document.querySelector(".js-download");
 const deleteBtnHtml =
   "<div class='bg-white hidden absolute top-0 left-0 js-delete-btn px-4 py-2 shadow'><i class='far fa-trash-alt pointer-events-none'></i></div>";
-const stitchesCSSPath = "https://stitches.hyperyolo.com/output.css";
+const stitchesCSSPath = "http://127.0.0.1:5500/output.css";
 const fontAwesomePath =
   "https://use.fontawesome.com/releases/v5.6.3/css/all.css";
 const fontAwesomeIntegrity =
   "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/";
-const stitchesHTML = html => `<!DOCTYPE html>
+const stitchesHTML = (html) => `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href=${stitchesCSSPath} rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
     <link rel="stylesheet" href=${fontAwesomePath} integrity=${fontAwesomeIntegrity} crossorigin="anonymous">
-    <title>Stitches</title>
+    <title>Stitches for tailblocks</title>
   </head>
   <body>${html}</body>
 </html>`;
@@ -32,13 +32,13 @@ dragula([snippets, droppable], {
   },
   accepts: function (el, target) {
     return target !== snippets;
-  }
+  },
 }).on("drop", (el, target) => {
   el.innerHTML += deleteBtnHtml;
   el.classList.add("relative");
 });
 
-filter.addEventListener("click", event => {
+filter.addEventListener("click", (event) => {
   if (event.target.tagName !== "BUTTON") {
     return;
   }
@@ -73,7 +73,7 @@ function masonry(grid, gridCell, gridGutter, dGridCol, tGridCol, mGridCol) {
   else g.style.height = gHeight / mGridCol + gHeight / (gcLength + 1) + "px";
 }
 
-downloadBtn.addEventListener("click", event => {
+downloadBtn.addEventListener("click", (event) => {
   let selectedBlocks = [];
   let selectedSnippets = document.querySelectorAll(
     ".js-droppable > .js-snippet"
@@ -85,12 +85,10 @@ downloadBtn.addEventListener("click", event => {
   let html = "";
 
   Promise.all(
-    selectedBlocks.map(template =>
-      fetch(`../templates/${template}.html`).then(
-        response => response.text()
-      )
+    selectedBlocks.map((template) =>
+      fetch(`../templates/${template}.html`).then((response) => response.text())
     )
-  ).then(templateString => {
+  ).then((templateString) => {
     html += templateString.join("");
     fileDownload(stitchesHTML(html), "stitches.html");
   });
