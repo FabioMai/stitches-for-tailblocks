@@ -43,6 +43,7 @@ Feel free to take this project and re-factor to your need! Not everyone wants th
 ## Contributing to the repo
 
 I'll try to keep the templates up-to-date, feel free to issue pull requests if I'm slacking off 😁
+Support for color themes and dark mode is yet to be implemented, please refer to the open issues. Thanks!
 
 ## License
 
