@@ -2,6 +2,8 @@
 
 A simple, fast web app to generate html based on a collection of commonly used user interface patterns.
 
+Drag & Drop elements to visually create a template for your landing page!
+
 Based on [Stitches](https://stitches.hyperyolo.com) and [tailblocks](https://mertjf.github.io/tailblocks/).
 
 ## 🎏 Live Site: [https://stitches-for-tailblocks.netlify.app/](https://stitches-for-tailblocks.netlify.app/)
