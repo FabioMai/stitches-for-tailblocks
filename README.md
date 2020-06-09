@@ -2,11 +2,13 @@
 
 A simple, fast web app to generate html based on a collection of commonly used user interface patterns.
 
+Drag & Drop elements to visually create a template for your landing page!
+
 Based on [Stitches](https://stitches.hyperyolo.com) and [tailblocks](https://mertjf.github.io/tailblocks/).
 
-## 🎏 Live Site: []()
+## 🎏 Live Site: [https://stitches-for-tailblocks.netlify.app/](https://stitches-for-tailblocks.netlify.app/)
 
-![app-screen-shot](https://cdn-images-1.medium.com/max/2000/1*DqVCpGnXJefwLXFneEHPZg.png)
+[![Stitches-for-tailblocks.png](https://i.postimg.cc/zG500VVZ/Stitches-for-tailblocks.png)](https://postimg.cc/HVZwLWwB)
 
 ## Running it locally
 
@@ -41,9 +43,12 @@ Feel free to take this project and re-factor to your need! Not everyone wants th
 ## Contributing to the repo
 
 I'll try to keep the templates up-to-date, feel free to issue pull requests if I'm slacking off 😁
+Support for color themes and dark mode is yet to be implemented, please refer to the open issues. Thanks!
 
 ## License
 
 MIT © [Amie Chen](https://amie-chen.com) - Stiches Template Generator
+
 MIT © [Mert Cukuren](https://mertjf.github.io/tailblocks/) - tailblocks Ready-to-use Tailwind Blocks
+
 MIT © [Fabio Maienschein](https://maienschein.tech/) - putting those two together for simplicity
